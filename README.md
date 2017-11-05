@@ -29,7 +29,7 @@ const splashy = require('splashy')()
 ;(async () => {
   const predominantColors = await splashy.fromUrl('https://i.imgur.com/ZJDyOhn.jpg')
   const palette = colorableDominant(predominantColors)
-  
+
   console.log(palette)
   // {
   //   backgroundColor: '#3C1020',

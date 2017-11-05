@@ -15,6 +15,6 @@ const sortBy = require('lodash.sortby')
  */
 module.exports = color => {
   const rgb = sortBy(color.rgb().array()).reverse()
-  const [max, med, min] = rgb
+  const [max, , min] = rgb
   return (max - min) / 10
 }

@@ -20,9 +20,7 @@ const calculateTotalPairScore = pairs =>
 
 const sortPairsByScore = pairs =>
   pairs.sort((a, b) => {
-    if (a.score === b.score) {
-      return 0
-    }
+    if (a.score === b.score) return 0
     return a.score > b.score ? -1 : 1
   })
 
