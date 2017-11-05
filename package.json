@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/Kikobeats/colorable-dominant/issues"
   },
+  "files": [
+    "src"
+  ],
   "keywords": [
     "accessibility",
     "color",
