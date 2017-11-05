@@ -2,7 +2,7 @@
   "name": "colorable-dominant",
   "description": "Create ARIA-compliant color themes based on a predominant color palette.",
   "homepage": "https://documentup.com/Kikobeats/colorable-dominant",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
@@ -16,9 +16,6 @@
   "bugs": {
     "url": "https://github.com/Kikobeats/colorable-dominant/issues"
   },
-  "files": [
-    "src"
-  ],
   "keywords": [
     "accessibility",
     "color",
@@ -48,6 +45,9 @@
   "engines": {
     "node": ">= 6"
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
