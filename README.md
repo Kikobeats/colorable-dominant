@@ -72,6 +72,10 @@ The minimum [WCAG contrast ratio](https://www.w3.org/TR/WCAG20/#visual-audio-con
 
 The value means that combinations below this value will be discarded.
 
+## Related
+
+- [splashy](https://github.com/microlinkhq/splashy) – Given an image, extract predominant & palette colors.
+
 ## License
 
 **colorable-dominant** © [Kiko Beats](https://kikobeats.com), Released under the [MIT](https://github.com/Kikobeats/colorable-dominant/blob/master/LICENSE.md) License.<br>
