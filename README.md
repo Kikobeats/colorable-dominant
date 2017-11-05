@@ -75,6 +75,7 @@ The value means that combinations below this value will be discarded.
 ## Related
 
 - [splashy](https://github.com/microlinkhq/splashy) – Given an image, extract predominant & palette colors.
+- [color-microservice](https://github.com/Kikobeats/color-microservice) – Get color information from any URL image microservice.
 
 ## License
 
