@@ -16,7 +16,14 @@
   "bugs": {
     "url": "https://github.com/Kikobeats/colorable-dominant/issues"
   },
-  "keywords": [],
+  "keywords": [
+    "accessibility",
+    "color",
+    "contrast",
+    "dominant",
+    "predominant",
+    "wcag"
+  ],
   "dependencies": {
     "color": "~2.0.0",
     "colorable": "~1.0.5",
