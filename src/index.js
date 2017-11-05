@@ -18,14 +18,13 @@ const DEFAULT = {
 const calculateTotalPairScore = pairs =>
   pairs.reduce((score, color) => score + color.score, 0)
 
-const sortPairsByScore = pairs => {
+const sortPairsByScore = pairs =>
   pairs.sort((a, b) => {
     if (a.score === b.score) {
       return 0
     }
     return a.score > b.score ? -1 : 1
   })
-}
 
 const getMostDominantPrimaryColor = (colors, WCAGCompliantColorPairs) => {
   var highestDominanceScore = 0
@@ -42,7 +41,10 @@ const getMostDominantPrimaryColor = (colors, WCAGCompliantColorPairs) => {
     }
   }
 
-  sortPairsByScore(WCAGCompliantColorPairs[mostDominantColor])
+  WCAGCompliantColorPairs[mostDominantColor] = sortPairsByScore(
+    WCAGCompliantColorPairs[mostDominantColor]
+  )
+
   return mostDominantColor
 }
 
