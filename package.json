@@ -1,0 +1,62 @@
+{
+  "name": "colorable-dominant",
+  "description": "Create ARIA-compliant color themes based on a predominant color palette.",
+  "homepage": "https://documentup.com/Kikobeats/colorable-dominant",
+  "version": "0.0.0",
+  "main": "src/index.js",
+  "author": {
+    "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats",
+    "url": "https://kikobeats.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/colorable-dominant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kikobeats/colorable-dominant/issues"
+  },
+  "keywords": [],
+  "dependencies": {
+    "color": "~2.0.0",
+    "colorable": "~1.0.5",
+    "lodash.sortby": "~4.7.0",
+    "normalize-value": "~1.0.0"
+  },
+  "devDependencies": {
+    "coveralls": "latest",
+    "git-dirty": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "mocha": "latest",
+    "nyc": "latest",
+    "prettier-standard": "latest",
+    "should": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard-markdown && standard",
+    "precommit": "lint-staged",
+    "pretest": "npm run lint",
+    "pretty": "prettier-standard index.js {core,test,bin}/**/*.js --single-quote",
+    "test": "nyc mocha"
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "prettier-standard",
+      "git add"
+    ]
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  }
+}
