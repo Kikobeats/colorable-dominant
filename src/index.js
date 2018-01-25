@@ -107,9 +107,12 @@ module.exports = (colors, opts) => {
     WCAGCompliantColorPairs
   )
 
-  let [color, alternativeColor, accentColor] = WCAGCompliantColorPairs[
-    backgroundColor
-  ]
+  // prettier-ignore
+  let [
+    color,
+    alternativeColor,
+    accentColor
+  ] = WCAGCompliantColorPairs[backgroundColor]
 
   if (!alternativeColor) alternativeColor = color
   if (!accentColor) accentColor = alternativeColor
