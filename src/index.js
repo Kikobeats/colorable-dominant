@@ -15,7 +15,8 @@ const DEFAULT = {
   compact: true
 }
 
-const calculateTotalPairScore = pairs => pairs.reduce((score, color) => score + color.score, 0)
+const calculateTotalPairScore = pairs =>
+  pairs.reduce((score, color) => score + color.score, 0)
 
 const sortPairsByScore = pairs =>
   pairs.sort((a, b) => {
@@ -46,18 +47,18 @@ const getMostDominantPrimaryColor = (colors, WCAGCompliantColorPairs) => {
 }
 
 module.exports = (colors, opts) => {
-  opts = Object.assign({compact: true}, DEFAULT, opts)
-  const {minContrast} = opts
+  opts = Object.assign({ compact: true }, DEFAULT, opts)
+  const { minContrast } = opts
   const colorsCombinations = colorable(colors, opts)
   const WCAGCompliantColorPairs = {}
 
   colorsCombinations.forEach((colorCombination, index) => {
-    const {hex, combinations} = colorCombination
+    const { hex, combinations } = colorCombination
     const dominantColor = Color(hex)
     const pairs = (WCAGCompliantColorPairs[dominantColor.hex()] = [])
 
     combinations.forEach(innerColorCombination => {
-      let {hex, contrast} = innerColorCombination
+      let { hex, contrast } = innerColorCombination
       let color = Color(hex)
 
       /**
@@ -80,14 +81,12 @@ module.exports = (colors, opts) => {
        */
       if (contrast < minContrast) {
         const delta = (minContrast - contrast) / 20
-        let lighten = dominantColor.dark()
+        let lighten = dominantColor.isDark()
         while (contrast < minContrast) {
           const newColor = lighten ? color.lighten(delta) : color.darken(delta)
           // If the new color is the same as the old one, we're not getting any
           // lighter or darker so we need to stop.
-          if (newColor.hex() === color.hex()) {
-            break
-          }
+          if (newColor.hex() === color.hex()) break
           const newContrast = dominantColor.contrast(newColor)
           // If the new contrast is lower than the old contrast
           // then we need to start moving the other direction in the spectrum
@@ -99,13 +98,18 @@ module.exports = (colors, opts) => {
         }
       }
       const score = contrast + range
-      pairs.push({color, score, contrast})
+      pairs.push({ color, score, contrast })
     })
   })
 
-  const backgroundColor = getMostDominantPrimaryColor(colors, WCAGCompliantColorPairs)
+  const backgroundColor = getMostDominantPrimaryColor(
+    colors,
+    WCAGCompliantColorPairs
+  )
 
-  let [color, alternativeColor, accentColor] = WCAGCompliantColorPairs[backgroundColor]
+  let [color, alternativeColor, accentColor] = WCAGCompliantColorPairs[
+    backgroundColor
+  ]
 
   if (!alternativeColor) alternativeColor = color
   if (!accentColor) accentColor = alternativeColor
