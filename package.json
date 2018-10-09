@@ -25,7 +25,7 @@
     "wcag"
   ],
   "dependencies": {
-    "color": "~3.0.0",
+    "color": "~3.1.0",
     "colorable": "~1.0.5",
     "lodash.sortby": "~4.7.0",
     "normalize-value": "~1.0.0"
