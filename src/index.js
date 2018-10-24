@@ -15,10 +15,14 @@ const DEFAULT = {
   compact: true
 }
 
+const isNil = value => value === null || value === undefined
+const isEmpty = value => value.length === 0
+const exists = value => !isNil(value) && !isEmpty(value)
+
 const calculateTotalPairScore = pairs =>
   pairs.reduce((score, color) => score + color.score, 0)
 
-const sortPairsByScore = pairs =>
+const sortPairsByScore = (pairs = []) =>
   pairs.sort((a, b) => {
     if (a.score === b.score) return 0
     return a.score > b.score ? -1 : 1
@@ -108,18 +112,15 @@ module.exports = (colors, opts) => {
   )
 
   // prettier-ignore
-  let [
-    color,
-    alternativeColor,
-    accentColor
-  ] = WCAGCompliantColorPairs[backgroundColor]
-
+  let [ color, alternativeColor, accentColor ] = WCAGCompliantColorPairs[backgroundColor]
   if (!alternativeColor) alternativeColor = color
   if (!accentColor) accentColor = alternativeColor
 
   return {
-    backgroundColor,
-    color: color.color.hex(),
-    alternativeColor: alternativeColor.color.hex()
+    backgroundColor: exists(backgroundColor) ? backgroundColor : null,
+    color: exists(color) ? color.color.hex() : null,
+    alternativeColor: exists(alternativeColor)
+      ? alternativeColor.color.hex()
+      : null
   }
 }

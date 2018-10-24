@@ -5,7 +5,7 @@ const should = require('should')
 const colorableDominant = require('..')
 const getColorDominance = require('../src/get-color-dominance')
 
-describe('Colorable dominant', () => {
+describe('colorable-dominant', () => {
   describe('.getColorDominance', () => {
     it('dominance score is 1 if the color is the first position', () => {
       const dominanceScore = getColorDominance('#ef4a2a', [
@@ -53,7 +53,17 @@ describe('Colorable dominant', () => {
     })
   })
 
-  it('from a list of colors', () => {
+  it('just one color', () => {
+    const predominantColors = ['#ef4a2a']
+
+    should(colorableDominant(predominantColors)).be.eql({
+      backgroundColor: null,
+      alternativeColor: null,
+      color: null
+    })
+  })
+
+  it('list of colors', () => {
     const predominantColors = [
       '#ef4a2a',
       '#3c1020',
