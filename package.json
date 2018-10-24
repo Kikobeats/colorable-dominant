@@ -2,7 +2,7 @@
   "name": "colorable-dominant",
   "description": "Create ARIA-compliant color themes based on a predominant color palette.",
   "homepage": "https://documentup.com/Kikobeats/colorable-dominant",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
@@ -57,6 +57,11 @@
     "test": "nyc mocha"
   },
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.js": [
       "prettier-standard",
@@ -67,10 +72,5 @@
     "env": [
       "mocha"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

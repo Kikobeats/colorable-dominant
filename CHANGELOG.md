@@ -1,3 +1,13 @@
+<a name="1.1.1"></a>
+## 1.1.1 (2018-10-24)
+
+* Migrate linter staged ([20e67ed](https://github.com/kikobeats/colorable-dominant/commit/20e67ed))
+* Resolve under one color ([9d69551](https://github.com/kikobeats/colorable-dominant/commit/9d69551))
+* Update package.json ([26c5f6a](https://github.com/kikobeats/colorable-dominant/commit/26c5f6a))
+* fix(package): update color to version 3.1.0 ([e03e90f](https://github.com/kikobeats/colorable-dominant/commit/e03e90f))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2018-01-25)
 
