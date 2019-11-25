@@ -1,7 +1,7 @@
 {
   "name": "colorable-dominant",
   "description": "Create ARIA-compliant color themes based on a predominant color palette.",
-  "homepage": "https://documentup.com/Kikobeats/colorable-dominant",
+  "homepage": "https://nicedoc.io/Kikobeats/colorable-dominant",
   "version": "1.1.1",
   "main": "src/index.js",
   "author": {
@@ -25,10 +25,10 @@
     "wcag"
   ],
   "dependencies": {
-    "color": "~3.1.0",
+    "color": "~3.1.2",
     "colorable": "~1.0.5",
     "lodash.sortby": "~4.7.0",
-    "normalize-value": "~1.0.0"
+    "normalize-value": "~1.0.1"
   },
   "devDependencies": {
     "coveralls": "latest",
@@ -39,7 +39,7 @@
     "nyc": "latest",
     "prettier-standard": "latest",
     "should": "latest",
-    "standard": "11",
+    "standard": "latest",
     "standard-markdown": "latest"
   },
   "engines": {
