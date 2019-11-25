@@ -1,3 +1,10 @@
+<a name="1.1.2"></a>
+## 1.1.2 (2019-11-25)
+
+* build: update dependencies ([ac9d662](https://github.com/kikobeats/colorable-dominant/commit/ac9d662))
+
+
+
 <a name="1.1.1"></a>
 ## 1.1.1 (2018-10-24)
 
