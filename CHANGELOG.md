@@ -1,3 +1,11 @@
+## <small>1.1.3 (2021-02-08)</small>
+
+* build: remove lodash dependency ([06519c5](https://github.com/kikobeats/colorable-dominant/commit/06519c5))
+* build: update dependencies ([ac9d662](https://github.com/kikobeats/colorable-dominant/commit/ac9d662))
+* Release 1.1.2 ([16ef453](https://github.com/kikobeats/colorable-dominant/commit/16ef453))
+
+
+
 <a name="1.1.2"></a>
 ## 1.1.2 (2019-11-25)
 
