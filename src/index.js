@@ -19,8 +19,7 @@ const isNil = value => value === null || value === undefined
 const isEmpty = value => value.length === 0
 const exists = value => !isNil(value) && !isEmpty(value)
 
-const calculateTotalPairScore = pairs =>
-  pairs.reduce((score, color) => score + color.score, 0)
+const calculateTotalPairScore = pairs => pairs.reduce((score, color) => score + color.score, 0)
 
 const sortPairsByScore = (pairs = []) =>
   pairs.sort((a, b) => {
@@ -29,8 +28,8 @@ const sortPairsByScore = (pairs = []) =>
   })
 
 const getMostDominantPrimaryColor = (colors, WCAGCompliantColorPairs) => {
-  var highestDominanceScore = 0
-  var mostDominantColor = ''
+  let highestDominanceScore = 0
+  let mostDominantColor = ''
 
   for (const dominantColor in WCAGCompliantColorPairs) {
     const pairs = WCAGCompliantColorPairs[dominantColor]
@@ -106,21 +105,16 @@ module.exports = (colors, opts) => {
     })
   })
 
-  const backgroundColor = getMostDominantPrimaryColor(
-    colors,
-    WCAGCompliantColorPairs
-  )
+  const backgroundColor = getMostDominantPrimaryColor(colors, WCAGCompliantColorPairs)
 
   // prettier-ignore
-  let [ color, alternativeColor, accentColor ] = WCAGCompliantColorPairs[backgroundColor]
+  let [color, alternativeColor, accentColor] = WCAGCompliantColorPairs[backgroundColor]
   if (!alternativeColor) alternativeColor = color
   if (!accentColor) accentColor = alternativeColor
 
   return {
     backgroundColor: exists(backgroundColor) ? backgroundColor : null,
     color: exists(color) ? color.color.hex() : null,
-    alternativeColor: exists(alternativeColor)
-      ? alternativeColor.color.hex()
-      : null
+    alternativeColor: exists(alternativeColor) ? alternativeColor.color.hex() : null
   }
 }

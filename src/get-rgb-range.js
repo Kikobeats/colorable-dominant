@@ -1,7 +1,5 @@
 'use strict'
 
-const sortBy = require('lodash.sortby')
-
 /**
  * The "range" is a metric used to determine how
  * vibrant a color is. It checks the delta between
@@ -14,7 +12,11 @@ const sortBy = require('lodash.sortby')
  * primarily red.
  */
 module.exports = color => {
-  const rgb = sortBy(color.rgb().array()).reverse()
+  const rgb = color
+    .rgb()
+    .array()
+    .sort((a, b) => b - a)
+
   const [max, , min] = rgb
   return (max - min) / 10
 }
