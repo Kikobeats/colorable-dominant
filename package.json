@@ -25,21 +25,27 @@
     "wcag"
   ],
   "dependencies": {
-    "color": "~3.1.3",
+    "color": "~4.0.0",
     "colorable": "~1.0.5",
     "normalize-value": "~1.0.2"
   },
   "devDependencies": {
-    "coveralls": "latest",
-    "git-dirty": "latest",
-    "husky": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "ci-publish": "latest",
+    "conventional-github-releaser": "latest",
+    "finepack": "latest",
+    "git-authors-cli": "latest",
     "lint-staged": "latest",
     "mocha": "latest",
+    "npm-check-updates": "latest",
     "nyc": "latest",
     "prettier-standard": "latest",
     "should": "latest",
+    "simple-git-hooks": "latest",
     "standard": "latest",
-    "standard-markdown": "latest"
+    "standard-markdown": "latest",
+    "standard-version": "latest"
   },
   "engines": {
     "node": ">= 6"
@@ -49,22 +55,40 @@
   ],
   "scripts": {
     "clean": "rm -rf node_modules",
+    "contributors": "(git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "standard-markdown && standard",
+    "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
+    "prerelease": "npm run update:check && npm run contributors",
     "pretest": "npm run lint",
     "pretty": "prettier-standard index.js {core,test,bin}/**/*.js --single-quote",
-    "test": "nyc mocha"
+    "release": "standard-version -a",
+    "release:github": "conventional-github-releaser -p angular",
+    "release:tags": "git push --follow-tags origin HEAD:master",
+    "test": "nyc mocha",
+    "update": "ncu -u",
+    "update:check": "ncu -- --error-level 2"
   },
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "lint-staged": {
-    "*.js": [
+    "package.json": [
+      "finepack"
+    ],
+    "*.js,!*.min.js,": [
       "prettier-standard"
+    ],
+    "*.md": [
+      "standard-markdown"
     ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx lint-staged"
   },
   "standard": {
     "env": [
