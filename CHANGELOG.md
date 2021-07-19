@@ -1,10 +1,8 @@
-## <small>1.1.3 (2021-02-08)</small>
+# Changelog
 
-* build: remove lodash dependency ([06519c5](https://github.com/kikobeats/colorable-dominant/commit/06519c5))
-* build: update dependencies ([ac9d662](https://github.com/kikobeats/colorable-dominant/commit/ac9d662))
-* Release 1.1.2 ([16ef453](https://github.com/kikobeats/colorable-dominant/commit/16ef453))
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-
+### 1.1.4 (2021-07-19)
 
 <a name="1.1.2"></a>
 ## 1.1.2 (2019-11-25)
@@ -48,6 +46,3 @@
 * Prettify files ([feb95a4](https://github.com/kikobeats/colorable-dominant/commit/feb95a4))
 * Update README.md ([13c11b1](https://github.com/kikobeats/colorable-dominant/commit/13c11b1))
 * docs(readme): add Greenkeeper badge ([f7f4000](https://github.com/kikobeats/colorable-dominant/commit/f7f4000))
-
-
-
