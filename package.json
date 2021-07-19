@@ -25,7 +25,7 @@
     "wcag"
   ],
   "dependencies": {
-    "color": "~3.1.3",
+    "color": "~4.0.0",
     "colorable": "~1.0.5",
     "normalize-value": "~1.0.2"
   },
