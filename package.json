@@ -2,7 +2,7 @@
   "name": "colorable-dominant",
   "description": "Create ARIA-compliant color themes based on a predominant color palette.",
   "homepage": "https://nicedoc.io/Kikobeats/colorable-dominant",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
