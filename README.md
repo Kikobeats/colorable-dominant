@@ -20,19 +20,18 @@ $ npm install colorable-dominant --save
 
 ```js
 const colorableDominant = require('colorable-dominant')
-const splashy = require('splashy')()
+const splashy = require('splashy')
 
-;(async () => {
-  const predominantColors = await splashy.fromUrl('https://i.imgur.com/ZJDyOhn.jpg')
-  const palette = colorableDominant(predominantColors)
+const buffer = Buffer.from(await fetch('https://i.imgur.com/ZJDyOhn.jpg').then(res => res.arrayBuffer()))
+const palette = await splashy(buffer)
 
-  console.log(palette)
-  // {
-  //   backgroundColor: '#3C1020',
-  //   alternativeColor: '#D17872',
-  //   color: '#EF4E2E'
-  // }
-})()
+console.log({ palette, ...colorableDominant(palette) })
+// {
+//   palette: [ '#941c1c', '#8c0c04', '#d58d74', '#ad685d', '#644430', '#ceb9ad' ],
+//   backgroundColor: '#CEB9AD',
+//   color: '#8C0C04',
+//   alternativeColor: '#941C1C'
+// }
 ```
 
 ## API
