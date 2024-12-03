@@ -78,4 +78,4 @@ The value means that combinations below this value will be discarded.
 **colorable-dominant** © Formidable Labs, Released under the [MIT](https://github.com/Kikobeats/colorable-dominant/blob/master/LICENSE.md) License.<br>
 Authored by Formidable Labs and maintained by Kiko Beats with help from [contributors](https://github.com/Kikobeats/colorable-dominant/contributors).
 
-> [kikobeats.com](https://kikobeats.com) · GitHub [@Kiko Beats](https://github.com/Kikobeats) · Twitter [@Kikobeats](https://twitter.com/Kikobeats)
+> [kikobeats.com](https://kikobeats.com) · GitHub [@Kiko Beats](https://github.com/Kikobeats) · X [@Kikobeats](https://x.com/Kikobeats)
