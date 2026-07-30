@@ -2,7 +2,7 @@
   "name": "colorable-dominant",
   "description": "Build ARIA and WCAG-compliant color themes from a predominant palette with contrast-safe pairs.",
   "homepage": "https://github.com/Kikobeats/colorable-dominant",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "main": "src/index.js",
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
