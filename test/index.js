@@ -88,10 +88,22 @@ describe('colorable-dominant', () => {
   })
 
   it('drops duplicate colors before pairing', () => {
-    should(colorableDominant(['#FF0000', '#FF0000', '#0000FF'], { threshold: 0 })).be.eql({
+    const expected = {
       backgroundColor: '#FF0000',
       color: '#00005C',
       alternativeColor: '#00005C'
+    }
+
+    should(colorableDominant(['#FF0000', '#FF0000', '#0000FF'], { threshold: 0 })).be.eql(expected)
+    should(colorableDominant(['#ff0000', '#FF0000', '#0000ff'], { threshold: 0 })).be.eql(expected)
+    should(colorableDominant(['#f00', '#FF0000', '#00f'], { threshold: 0 })).be.eql(expected)
+  })
+
+  it('ranks a repeated color by its place in the full palette', () => {
+    should(colorableDominant(['#0003E5', '#000083', '#000083'])).be.eql({
+      backgroundColor: '#000083',
+      color: '#8A8BFF',
+      alternativeColor: '#8A8BFF'
     })
   })
 
@@ -108,7 +120,7 @@ describe('colorable-dominant', () => {
     should(colorableDominant(colors, { threshold: undefined })).be.eql(colorableDominant(colors))
   })
 
-  it('produces the same themes as the colorable-based implementation', () => {
+  it('builds the recorded theme for each palette', () => {
     colorableParity.forEach(({ colors, options, expected }) => {
       should(colorableDominant(colors, options)).be.eql(expected)
     })
@@ -156,9 +168,17 @@ describe('colorable-dominant', () => {
       color: '#00005C',
       alternativeColor: '#FFFFFF'
     }
+    const reversed = {
+      backgroundColor: '#0000FF',
+      color: '#00FF00',
+      alternativeColor: '#FFBEBE'
+    }
 
     should(colorableDominant(['#FF0000', '#00FF00', '#0000FF'])).be.eql(expected)
     should(colorableDominant(['#f00', '#0f0', '#00f'])).be.eql(expected)
     should(colorableDominant(['#F00', '#0F0', '#00F'])).be.eql(expected)
+    should(colorableDominant(['#0000FF', '#00FF00', '#FF0000'])).be.eql(reversed)
+    should(colorableDominant(['#00f', '#0f0', '#f00'])).be.eql(reversed)
+    should(colorableDominant(['#00F', '#0F0', '#F00'])).be.eql(reversed)
   })
 })

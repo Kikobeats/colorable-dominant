@@ -26,9 +26,9 @@
       "#9fc515"
     ],
     "expected": {
-      "backgroundColor": "#741B1D",
-      "color": "#FD83B2",
-      "alternativeColor": "#E0BFF7"
+      "backgroundColor": "#C7C76B",
+      "color": "#93033B",
+      "alternativeColor": "#3F4E08"
     }
   },
   {
@@ -42,9 +42,9 @@
       "#7e2c6f"
     ],
     "expected": {
-      "backgroundColor": "#5A5083",
-      "color": "#FFC4A0",
-      "alternativeColor": "#FDEAF3"
+      "backgroundColor": "#ED4497",
+      "color": "#FFFFFF",
+      "alternativeColor": "#FFFFFF"
     }
   },
   {
@@ -54,9 +54,9 @@
       "#e25f68"
     ],
     "expected": {
-      "backgroundColor": "#E25F68",
-      "color": "#FFFFFF",
-      "alternativeColor": "#FFFFFF"
+      "backgroundColor": "#00B1C2",
+      "color": "#0E3446",
+      "alternativeColor": "#601117"
     }
   },
   {
@@ -85,9 +85,9 @@
       "#865619"
     ],
     "expected": {
-      "backgroundColor": "#B37044",
-      "color": "#FFFFFF",
-      "alternativeColor": "#201406"
+      "backgroundColor": "#DE34AD",
+      "color": "#1B1105",
+      "alternativeColor": "#FFFFFF"
     }
   },
   {
@@ -99,9 +99,9 @@
       "#0ebf6f"
     ],
     "expected": {
-      "backgroundColor": "#D290DA",
-      "color": "#043C23",
-      "alternativeColor": "#600C7A"
+      "backgroundColor": "#77C0DC",
+      "color": "#064D2D",
+      "alternativeColor": "#750F95"
     }
   },
   {
@@ -136,9 +136,9 @@
       "minContrast": 3
     },
     "expected": {
-      "backgroundColor": "#A37644",
-      "color": "#650941",
-      "alternativeColor": "#ABF0C0"
+      "backgroundColor": "#0EAD3C",
+      "color": "#8E0D5B",
+      "alternativeColor": "#FFFFFF"
     }
   },
   {
@@ -153,9 +153,9 @@
       "#3e6eef"
     ],
     "expected": {
-      "backgroundColor": "#8F99C3",
-      "color": "#510058",
-      "alternativeColor": "#FFFFFF"
+      "backgroundColor": "#4D03C9",
+      "color": "#F8A6FF",
+      "alternativeColor": "#F4CA07"
     }
   },
   {
@@ -166,9 +166,9 @@
       "#6f0fde"
     ],
     "expected": {
-      "backgroundColor": "#54088A",
-      "color": "#22F123",
-      "alternativeColor": "#C9A1F9"
+      "backgroundColor": "#22F123",
+      "color": "#6F0FDE",
+      "alternativeColor": "#0B5477"
     }
   },
   {
@@ -181,9 +181,9 @@
       "#b1bb28"
     ],
     "expected": {
-      "backgroundColor": "#1B0232",
-      "color": "#DCF99F",
-      "alternativeColor": "#B1BB28"
+      "backgroundColor": "#0483BE",
+      "color": "#FFFFFF",
+      "alternativeColor": "#FFFFFF"
     }
   },
   {
@@ -200,9 +200,9 @@
       "minContrast": 7
     },
     "expected": {
-      "backgroundColor": "#87DF6A",
-      "color": "#003F0F",
-      "alternativeColor": "#3D2900"
+      "backgroundColor": "#390DE8",
+      "color": "#8CFFA8",
+      "alternativeColor": "#FFE3A8"
     }
   },
   {
@@ -217,9 +217,9 @@
       "#4f723a"
     ],
     "expected": {
-      "backgroundColor": "#4F723A",
-      "color": "#E8F3C5",
-      "alternativeColor": "#DAF9E9"
+      "backgroundColor": "#426163",
+      "color": "#C4DF6A",
+      "alternativeColor": "#85EBB7"
     }
   },
   {
@@ -234,9 +234,9 @@
       "#138f79"
     ],
     "expected": {
-      "backgroundColor": "#5B5A26",
-      "color": "#4BE0FA",
-      "alternativeColor": "#FEDEC4"
+      "backgroundColor": "#11D6F9",
+      "color": "#823B02",
+      "alternativeColor": "#8E1781"
     }
   },
   {
@@ -265,9 +265,9 @@
       "minContrast": 7
     },
     "expected": {
-      "backgroundColor": "#0B5241",
-      "color": "#FEE0E9",
-      "alternativeColor": "#FFFFFF"
+      "backgroundColor": "#7C3D68",
+      "color": "#FFF4F7",
+      "alternativeColor": "#000101"
     }
   },
   {
@@ -293,9 +293,9 @@
       "#643271"
     ],
     "expected": {
-      "backgroundColor": "#A378F8",
-      "color": "#50060B",
-      "alternativeColor": "#3D0665"
+      "backgroundColor": "#F24250",
+      "color": "#2F054D",
+      "alternativeColor": "#FFFFFF"
     }
   },
   {
@@ -325,9 +325,9 @@
       "minContrast": 7
     },
     "expected": {
-      "backgroundColor": "#9FED2E",
-      "color": "#143600",
-      "alternativeColor": "#07374E"
+      "backgroundColor": "#427DB8",
+      "color": "#FFFFFF",
+      "alternativeColor": "#FFFFFF"
     }
   },
   {
@@ -356,9 +356,9 @@
       "#31a21e"
     ],
     "expected": {
-      "backgroundColor": "#0E1F18",
-      "color": "#94EF31",
-      "alternativeColor": "#1CCD16"
+      "backgroundColor": "#407B5D",
+      "color": "#EDFCDD",
+      "alternativeColor": "#FFFFFF"
     }
   },
   {
@@ -367,9 +367,9 @@
       "#fe58e3"
     ],
     "expected": {
-      "backgroundColor": "#FE58E3",
-      "color": "#FFFFFF",
-      "alternativeColor": "#FFFFFF"
+      "backgroundColor": "#F19E04",
+      "color": "#750162",
+      "alternativeColor": "#750162"
     }
   },
   {
@@ -388,9 +388,9 @@
       "minContrast": 7
     },
     "expected": {
-      "backgroundColor": "#1D0922",
-      "color": "#1ED0C9",
-      "alternativeColor": "#7BE591"
+      "backgroundColor": "#ACD6FF",
+      "color": "#083634",
+      "alternativeColor": "#17332E"
     }
   },
   {
@@ -402,9 +402,9 @@
       "#ffb5ac"
     ],
     "expected": {
-      "backgroundColor": "#FFB5AC",
-      "color": "#36510B",
-      "alternativeColor": "#144F5D"
+      "backgroundColor": "#80C01A",
+      "color": "#124754",
+      "alternativeColor": "#5012A8"
     }
   },
   {
@@ -416,9 +416,9 @@
       "#a90487"
     ],
     "expected": {
-      "backgroundColor": "#334B3A",
-      "color": "#FDA0EA",
-      "alternativeColor": "#E7B2C4"
+      "backgroundColor": "#639B24",
+      "color": "#440236",
+      "alternativeColor": "#3E1322"
     }
   },
   {
@@ -449,9 +449,9 @@
       "minContrast": 7
     },
     "expected": {
-      "backgroundColor": "#F8ECA3",
-      "color": "#891209",
-      "alternativeColor": "#623E00"
+      "backgroundColor": "#5ECF18",
+      "color": "#4E0A05",
+      "alternativeColor": "#032905"
     }
   },
   {
@@ -466,9 +466,9 @@
       "#24e477"
     ],
     "expected": {
-      "backgroundColor": "#865DA6",
-      "color": "#FFFFFF",
-      "alternativeColor": "#DAFAE8"
+      "backgroundColor": "#A2BE07",
+      "color": "#780236",
+      "alternativeColor": "#171DD9"
     }
   },
   {
@@ -478,9 +478,9 @@
       "#a2fd8d"
     ],
     "expected": {
-      "backgroundColor": "#A2FD8D",
-      "color": "#5D02D3",
-      "alternativeColor": "#187311"
+      "backgroundColor": "#5D02D3",
+      "color": "#30DF21",
+      "alternativeColor": "#A2FD8D"
     }
   },
   {
@@ -497,9 +497,9 @@
       "#a75aa5"
     ],
     "expected": {
-      "backgroundColor": "#3C1529",
-      "color": "#FC16C2",
-      "alternativeColor": "#ADD859"
+      "backgroundColor": "#E87676",
+      "color": "#560140",
+      "alternativeColor": "#53113E"
     }
   },
   {
@@ -513,7 +513,7 @@
       "minContrast": 3
     },
     "expected": {
-      "backgroundColor": "#0D3B93",
+      "backgroundColor": "#702CB9",
       "color": "#2EEBF7",
       "alternativeColor": "#46F87B"
     }
@@ -528,7 +528,7 @@
       "#1d8241"
     ],
     "expected": {
-      "backgroundColor": "#1D8241",
+      "backgroundColor": "#EB19A1",
       "color": "#FFFFFF",
       "alternativeColor": "#FFFFFF"
     }
@@ -539,9 +539,9 @@
       "#193a09"
     ],
     "expected": {
-      "backgroundColor": "#193A09",
-      "color": "#5ADA97",
-      "alternativeColor": "#5ADA97"
+      "backgroundColor": "#5ADA97",
+      "color": "#193A09",
+      "alternativeColor": "#193A09"
     }
   },
   {
@@ -551,9 +551,9 @@
       "#9d091d"
     ],
     "expected": {
-      "backgroundColor": "#9D091D",
-      "color": "#FBD0D7",
-      "alternativeColor": "#47D4A9"
+      "backgroundColor": "#40D2A6",
+      "color": "#950C23",
+      "alternativeColor": "#9C091D"
     }
   },
   {
@@ -578,9 +578,9 @@
       "#4a7eb4"
     ],
     "expected": {
-      "backgroundColor": "#4A7EB4",
+      "backgroundColor": "#A32EB5",
       "color": "#FFFFFF",
-      "alternativeColor": "#18071B"
+      "alternativeColor": "#FFFFFF"
     }
   },
   {
@@ -589,9 +589,9 @@
       "#60f88d"
     ],
     "expected": {
-      "backgroundColor": "#60F88D",
-      "color": "#676203",
-      "alternativeColor": "#676203"
+      "backgroundColor": "#CCC105",
+      "color": "#FFFFFF",
+      "alternativeColor": "#FFFFFF"
     }
   },
   {
@@ -604,9 +604,9 @@
       "#29fb2f"
     ],
     "expected": {
-      "backgroundColor": "#CCDC8E",
-      "color": "#025C04",
-      "alternativeColor": "#055680"
+      "backgroundColor": "#B11AAF",
+      "color": "#8AFD8D",
+      "alternativeColor": "#E2F4FE"
     }
   }
 ]
