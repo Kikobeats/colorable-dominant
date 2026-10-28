@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.1.20 (2026-10-28)
+
+
+### Bug Fixes
+
+* **dominance:** honor palette order regardless of hex case ([#26](https://github.com/kikobeats/colorable-dominant/issues/26)) ([9ee1e2e](https://github.com/kikobeats/colorable-dominant/commit/9ee1e2ef6b5bb6905d67bf5cc6ea94c74e6a69d4))
+
 ### 1.1.19 (2026-10-28)
 
 ### 1.1.18 (2026-10-28)
