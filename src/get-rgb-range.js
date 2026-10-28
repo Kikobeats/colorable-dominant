@@ -12,10 +12,7 @@
  * primarily red.
  */
 module.exports = color => {
-  const rgb = color
-    .rgb()
-    .array()
-    .sort((a, b) => b - a)
+  const rgb = [...color].sort((a, b) => b - a)
 
   const [max, , min] = rgb
   return (max - min) / 10

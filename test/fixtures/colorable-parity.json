@@ -1,0 +1,612 @@
+[
+  {
+    "colors": [
+      "#e99ced",
+      "#0cdb5c",
+      "#0d11fb",
+      "#f98873"
+    ],
+    "options": {
+      "minContrast": 7
+    },
+    "expected": {
+      "backgroundColor": "#E99CED",
+      "color": "#02058E",
+      "alternativeColor": "#022610"
+    }
+  },
+  {
+    "colors": [
+      "#c7c76b",
+      "#79da5c",
+      "#7b17bf",
+      "#d55b2d",
+      "#fb1f74",
+      "#741b1d",
+      "#9fc515"
+    ],
+    "expected": {
+      "backgroundColor": "#741B1D",
+      "color": "#FD83B2",
+      "alternativeColor": "#E0BFF7"
+    }
+  },
+  {
+    "colors": [
+      "#ed4497",
+      "#5a5083",
+      "#b64f28",
+      "#dfa061",
+      "#ff7c2d",
+      "#40eb96",
+      "#7e2c6f"
+    ],
+    "expected": {
+      "backgroundColor": "#5A5083",
+      "color": "#FFC4A0",
+      "alternativeColor": "#FDEAF3"
+    }
+  },
+  {
+    "colors": [
+      "#00b1c2",
+      "#258bbd",
+      "#e25f68"
+    ],
+    "expected": {
+      "backgroundColor": "#E25F68",
+      "color": "#FFFFFF",
+      "alternativeColor": "#FFFFFF"
+    }
+  },
+  {
+    "colors": [
+      "#d4807b",
+      "#c9f553",
+      "#e23546",
+      "#f3b735",
+      "#0d4bd3",
+      "#c23582",
+      "#c16a54"
+    ],
+    "options": {
+      "minContrast": 3
+    },
+    "expected": {
+      "backgroundColor": "#D4807B",
+      "color": "#0B3FB1",
+      "alternativeColor": "#FFFFFF"
+    }
+  },
+  {
+    "colors": [
+      "#de34ad",
+      "#b37044",
+      "#865619"
+    ],
+    "expected": {
+      "backgroundColor": "#B37044",
+      "color": "#FFFFFF",
+      "alternativeColor": "#201406"
+    }
+  },
+  {
+    "colors": [
+      "#77c0dc",
+      "#c63baf",
+      "#9513be",
+      "#d290da",
+      "#0ebf6f"
+    ],
+    "expected": {
+      "backgroundColor": "#D290DA",
+      "color": "#043C23",
+      "alternativeColor": "#600C7A"
+    }
+  },
+  {
+    "colors": [
+      "#e93248",
+      "#d9cffc",
+      "#f307e2",
+      "#3dfb3d",
+      "#ecd5a5",
+      "#8f5f2f",
+      "#060222",
+      "#c3165d",
+      "#7dfe30",
+      "#8d8168"
+    ],
+    "expected": {
+      "backgroundColor": "#D9CFFC",
+      "color": "#9C0491",
+      "alternativeColor": "#B51327"
+    }
+  },
+  {
+    "colors": [
+      "#0ead3c",
+      "#712ebf",
+      "#bf6e1d",
+      "#e91596",
+      "#27d85f",
+      "#a37644"
+    ],
+    "options": {
+      "minContrast": 3
+    },
+    "expected": {
+      "backgroundColor": "#A37644",
+      "color": "#650941",
+      "alternativeColor": "#ABF0C0"
+    }
+  },
+  {
+    "colors": [
+      "#4d03c9",
+      "#8f99c3",
+      "#884934",
+      "#f4ca07",
+      "#53840f",
+      "#86e86d",
+      "#eb01fd",
+      "#3e6eef"
+    ],
+    "expected": {
+      "backgroundColor": "#8F99C3",
+      "color": "#510058",
+      "alternativeColor": "#FFFFFF"
+    }
+  },
+  {
+    "colors": [
+      "#22f123",
+      "#54088a",
+      "#2eaeec",
+      "#6f0fde"
+    ],
+    "expected": {
+      "backgroundColor": "#54088A",
+      "color": "#22F123",
+      "alternativeColor": "#C9A1F9"
+    }
+  },
+  {
+    "colors": [
+      "#0483be",
+      "#4a6591",
+      "#dcf99f",
+      "#1b0232",
+      "#f095cf",
+      "#b1bb28"
+    ],
+    "expected": {
+      "backgroundColor": "#1B0232",
+      "color": "#DCF99F",
+      "alternativeColor": "#B1BB28"
+    }
+  },
+  {
+    "colors": [
+      "#390de8",
+      "#8e5ede",
+      "#d39001",
+      "#68d4e9",
+      "#c949f9",
+      "#00fa3c",
+      "#87df6a"
+    ],
+    "options": {
+      "minContrast": 7
+    },
+    "expected": {
+      "backgroundColor": "#87DF6A",
+      "color": "#003F0F",
+      "alternativeColor": "#3D2900"
+    }
+  },
+  {
+    "colors": [
+      "#d97b43",
+      "#426163",
+      "#b6d768",
+      "#1eb96a",
+      "#a9ce2c",
+      "#e2c376",
+      "#6b5618",
+      "#4f723a"
+    ],
+    "expected": {
+      "backgroundColor": "#4F723A",
+      "color": "#E8F3C5",
+      "alternativeColor": "#DAF9E9"
+    }
+  },
+  {
+    "colors": [
+      "#11d6f9",
+      "#b5089b",
+      "#dd2cc9",
+      "#5b5a26",
+      "#ce5d03",
+      "#6a677d",
+      "#d650b4",
+      "#138f79"
+    ],
+    "expected": {
+      "backgroundColor": "#5B5A26",
+      "color": "#4BE0FA",
+      "alternativeColor": "#FEDEC4"
+    }
+  },
+  {
+    "colors": [
+      "#313c70",
+      "#e8de4a",
+      "#6f2e3f",
+      "#aed9da",
+      "#c3f723",
+      "#afb75d",
+      "#33baef"
+    ],
+    "expected": {
+      "backgroundColor": "#313C70",
+      "color": "#C3F723",
+      "alternativeColor": "#33BAEF"
+    }
+  },
+  {
+    "colors": [
+      "#7c3d68",
+      "#0b5241",
+      "#f6054b"
+    ],
+    "options": {
+      "minContrast": 7
+    },
+    "expected": {
+      "backgroundColor": "#0B5241",
+      "color": "#FEE0E9",
+      "alternativeColor": "#FFFFFF"
+    }
+  },
+  {
+    "colors": [
+      "#6399c8",
+      "#2fa0b9",
+      "#850820",
+      "#eebb21",
+      "#6a46d8",
+      "#d50442"
+    ],
+    "expected": {
+      "backgroundColor": "#6399C8",
+      "color": "#58021B",
+      "alternativeColor": "#FFFFFF"
+    }
+  },
+  {
+    "colors": [
+      "#f24250",
+      "#5f0a9d",
+      "#a378f8",
+      "#643271"
+    ],
+    "expected": {
+      "backgroundColor": "#A378F8",
+      "color": "#50060B",
+      "alternativeColor": "#3D0665"
+    }
+  },
+  {
+    "colors": [
+      "#dcdd7a",
+      "#4e27f5"
+    ],
+    "expected": {
+      "backgroundColor": "#DCDD7A",
+      "color": "#4E27F5",
+      "alternativeColor": "#4E27F5"
+    }
+  },
+  {
+    "colors": [
+      "#427db8",
+      "#577c90",
+      "#83fe3b",
+      "#39b1ed",
+      "#2fab7c",
+      "#1d7ad4",
+      "#583306",
+      "#bd9020",
+      "#9fed2e"
+    ],
+    "options": {
+      "minContrast": 7
+    },
+    "expected": {
+      "backgroundColor": "#9FED2E",
+      "color": "#143600",
+      "alternativeColor": "#07374E"
+    }
+  },
+  {
+    "colors": [
+      "#406992",
+      "#86a61f",
+      "#3260b5",
+      "#2af471",
+      "#1c816c"
+    ],
+    "expected": {
+      "backgroundColor": "#406992",
+      "color": "#91F9B6",
+      "alternativeColor": "#FFFFFF"
+    }
+  },
+  {
+    "colors": [
+      "#407b5d",
+      "#51adac",
+      "#1ccd16",
+      "#266e0e",
+      "#0e1f18",
+      "#e3bd42",
+      "#94ef31",
+      "#31a21e"
+    ],
+    "expected": {
+      "backgroundColor": "#0E1F18",
+      "color": "#94EF31",
+      "alternativeColor": "#1CCD16"
+    }
+  },
+  {
+    "colors": [
+      "#f19e04",
+      "#fe58e3"
+    ],
+    "expected": {
+      "backgroundColor": "#FE58E3",
+      "color": "#FFFFFF",
+      "alternativeColor": "#FFFFFF"
+    }
+  },
+  {
+    "colors": [
+      "#4eab9a",
+      "#acd6ff",
+      "#b4bf6a",
+      "#1d0922",
+      "#ebe7bb",
+      "#7be591",
+      "#671d69",
+      "#1ed0c9",
+      "#f1f2f4"
+    ],
+    "options": {
+      "minContrast": 7
+    },
+    "expected": {
+      "backgroundColor": "#1D0922",
+      "color": "#1ED0C9",
+      "alternativeColor": "#7BE591"
+    }
+  },
+  {
+    "colors": [
+      "#80c01a",
+      "#984ee0",
+      "#2eb4d3",
+      "#5012a8",
+      "#ffb5ac"
+    ],
+    "expected": {
+      "backgroundColor": "#FFB5AC",
+      "color": "#36510B",
+      "alternativeColor": "#144F5D"
+    }
+  },
+  {
+    "colors": [
+      "#639b24",
+      "#754a21",
+      "#334b3a",
+      "#bc3a65",
+      "#a90487"
+    ],
+    "expected": {
+      "backgroundColor": "#334B3A",
+      "color": "#FDA0EA",
+      "alternativeColor": "#E7B2C4"
+    }
+  },
+  {
+    "colors": [
+      "#e7c769",
+      "#528bd1"
+    ],
+    "expected": {
+      "backgroundColor": "#E7C769",
+      "color": "#25538B",
+      "alternativeColor": "#25538B"
+    }
+  },
+  {
+    "colors": [
+      "#5ecf18",
+      "#c0b1bb",
+      "#488495",
+      "#12e61a",
+      "#9b466f",
+      "#d98900",
+      "#360c92",
+      "#f8eca3",
+      "#ee1f0f",
+      "#dc256c"
+    ],
+    "options": {
+      "minContrast": 7
+    },
+    "expected": {
+      "backgroundColor": "#F8ECA3",
+      "color": "#891209",
+      "alternativeColor": "#623E00"
+    }
+  },
+  {
+    "colors": [
+      "#a2be07",
+      "#865da6",
+      "#ac84bf",
+      "#171dda",
+      "#fb3f91",
+      "#3b890b",
+      "#e6a088",
+      "#24e477"
+    ],
+    "expected": {
+      "backgroundColor": "#865DA6",
+      "color": "#FFFFFF",
+      "alternativeColor": "#DAFAE8"
+    }
+  },
+  {
+    "colors": [
+      "#5d02d3",
+      "#30df21",
+      "#a2fd8d"
+    ],
+    "expected": {
+      "backgroundColor": "#A2FD8D",
+      "color": "#5D02D3",
+      "alternativeColor": "#187311"
+    }
+  },
+  {
+    "colors": [
+      "#e87676",
+      "#e18b62",
+      "#3c1529",
+      "#add859",
+      "#07651c",
+      "#451a4b",
+      "#d632a1",
+      "#f87b61",
+      "#f303b6",
+      "#a75aa5"
+    ],
+    "expected": {
+      "backgroundColor": "#3C1529",
+      "color": "#FC16C2",
+      "alternativeColor": "#ADD859"
+    }
+  },
+  {
+    "colors": [
+      "#702cb9",
+      "#46f87b",
+      "#2eebf7",
+      "#0d3b93"
+    ],
+    "options": {
+      "minContrast": 3
+    },
+    "expected": {
+      "backgroundColor": "#0D3B93",
+      "color": "#2EEBF7",
+      "alternativeColor": "#46F87B"
+    }
+  },
+  {
+    "colors": [
+      "#eb19a1",
+      "#61d31d",
+      "#34c807",
+      "#f73d26",
+      "#a5a726",
+      "#1d8241"
+    ],
+    "expected": {
+      "backgroundColor": "#1D8241",
+      "color": "#FFFFFF",
+      "alternativeColor": "#FFFFFF"
+    }
+  },
+  {
+    "colors": [
+      "#5ada97",
+      "#193a09"
+    ],
+    "expected": {
+      "backgroundColor": "#193A09",
+      "color": "#5ADA97",
+      "alternativeColor": "#5ADA97"
+    }
+  },
+  {
+    "colors": [
+      "#40d2a6",
+      "#da1233",
+      "#9d091d"
+    ],
+    "expected": {
+      "backgroundColor": "#9D091D",
+      "color": "#FBD0D7",
+      "alternativeColor": "#47D4A9"
+    }
+  },
+  {
+    "colors": [
+      "#0e685b",
+      "#930bf3",
+      "#ff988d"
+    ],
+    "options": {
+      "minContrast": 3
+    },
+    "expected": {
+      "backgroundColor": "#0E685B",
+      "color": "#DFB6FC",
+      "alternativeColor": "#FF988D"
+    }
+  },
+  {
+    "colors": [
+      "#a32eb5",
+      "#fe417f",
+      "#4a7eb4"
+    ],
+    "expected": {
+      "backgroundColor": "#4A7EB4",
+      "color": "#FFFFFF",
+      "alternativeColor": "#18071B"
+    }
+  },
+  {
+    "colors": [
+      "#ccc105",
+      "#60f88d"
+    ],
+    "expected": {
+      "backgroundColor": "#60F88D",
+      "color": "#676203",
+      "alternativeColor": "#676203"
+    }
+  },
+  {
+    "colors": [
+      "#b11aaf",
+      "#ccdc8e",
+      "#2aaff6",
+      "#3462ba",
+      "#ab28be",
+      "#29fb2f"
+    ],
+    "expected": {
+      "backgroundColor": "#CCDC8E",
+      "color": "#025C04",
+      "alternativeColor": "#055680"
+    }
+  }
+]
