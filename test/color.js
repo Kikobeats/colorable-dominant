@@ -2,7 +2,14 @@
 
 const should = require('should')
 
-const { parseHex, toHex, contrastRatio } = require('../src/color')
+const {
+  parseHex,
+  toHex,
+  contrastRatio,
+  rgbToHsl,
+  hslToRgb,
+  shiftLightness
+} = require('../src/color')
 
 describe('color', () => {
   describe('.parseHex', () => {
@@ -28,6 +35,16 @@ describe('color', () => {
   describe('.toHex', () => {
     it('serializes rounded channels as uppercase hex', () => {
       should(toHex([0, 15.5, 254.4])).be.equal('#0010FE')
+    })
+  })
+
+  describe('.shiftLightness', () => {
+    const shift = (hex, ratio) => toHex(hslToRgb(shiftLightness(rgbToHsl(parseHex(hex)), ratio)))
+
+    it('lightens and darkens like color@4', () => {
+      should(shift('#3c1020', 0.5)).be.equal('#5A1830')
+      should(shift('#808080', 0.5)).be.equal('#C0C0C0')
+      should(shift('#808080', -0.5)).be.equal('#404040')
     })
   })
 
