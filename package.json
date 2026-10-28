@@ -29,11 +29,6 @@
     "theme",
     "wcag"
   ],
-  "dependencies": {
-    "color": "~4.2.0",
-    "colorable": "~1.0.5",
-    "normalize-value": "~1.0.2"
-  },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",

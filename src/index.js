@@ -1,8 +1,14 @@
 'use strict'
 
-const colorable = require('colorable')
-const Color = require('color')
-
+const {
+  parseHex,
+  toHex,
+  contrastRatio,
+  isDark,
+  rgbToHsl,
+  hslToRgb,
+  shiftLightness
+} = require('./color')
 const getColorDominance = require('./get-color-dominance')
 const getRGBRange = require('./get-rgb-range')
 
@@ -11,8 +17,7 @@ const MINIMUM_CONTRAST_RATIO = 4.5
 
 const DEFAULT = {
   threshold: THRESHOLD_CONTRAST_RATIO,
-  minContrast: MINIMUM_CONTRAST_RATIO,
-  compact: true
+  minContrast: MINIMUM_CONTRAST_RATIO
 }
 
 const isNil = value => value === null || value === undefined
@@ -49,20 +54,26 @@ const getMostDominantPrimaryColor = (colors, WCAGCompliantColorPairs) => {
   return mostDominantColor
 }
 
+const getColorCombinations = (palette, threshold) =>
+  palette.map(dominantColor => ({
+    dominantColor,
+    combinations: palette
+      .filter(color => color !== dominantColor)
+      .map(color => ({ color, contrast: contrastRatio(dominantColor, color) }))
+      .filter(({ contrast }) => contrast > threshold)
+  }))
+
 module.exports = (colors, opts) => {
-  opts = Object.assign({ compact: true }, DEFAULT, opts)
-  const { minContrast } = opts
-  const colorsCombinations = colorable(colors, opts)
+  opts = Object.assign({}, DEFAULT, opts)
+  const { minContrast, threshold = 0 } = opts
+  const palette = colors.filter((color, index) => colors.indexOf(color) === index).map(parseHex)
   const WCAGCompliantColorPairs = {}
 
-  colorsCombinations.forEach((colorCombination, index) => {
-    const { hex, combinations } = colorCombination
-    const dominantColor = Color(hex)
-    const pairs = (WCAGCompliantColorPairs[dominantColor.hex()] = [])
+  getColorCombinations(palette, threshold).forEach(({ dominantColor, combinations }) => {
+    const pairs = (WCAGCompliantColorPairs[toHex(dominantColor)] = [])
 
     combinations.forEach(innerColorCombination => {
-      let { hex, contrast } = innerColorCombination
-      let color = Color(hex)
+      let { color, contrast } = innerColorCombination
 
       /**
        * The score is determined based three things:
@@ -84,18 +95,21 @@ module.exports = (colors, opts) => {
        */
       if (contrast < minContrast) {
         const delta = (minContrast - contrast) / 20
-        let lighten = dominantColor.isDark()
+        let lighten = isDark(dominantColor)
+        let hsl = rgbToHsl(color)
         while (contrast < minContrast) {
-          const newColor = lighten ? color.lighten(delta) : color.darken(delta)
+          const newHsl = shiftLightness(hsl, lighten ? delta : -delta)
+          const newColor = hslToRgb(newHsl)
           // If the new color is the same as the old one, we're not getting any
           // lighter or darker so we need to stop.
-          if (newColor.hex() === color.hex()) break
-          const newContrast = dominantColor.contrast(newColor)
+          if (toHex(newColor) === toHex(color)) break
+          const newContrast = contrastRatio(dominantColor, newColor)
           // If the new contrast is lower than the old contrast
           // then we need to start moving the other direction in the spectrum
           if (newContrast < contrast) {
             lighten = !lighten
           }
+          hsl = newHsl
           color = newColor
           contrast = newContrast
         }
@@ -114,7 +128,7 @@ module.exports = (colors, opts) => {
 
   return {
     backgroundColor: exists(backgroundColor) ? backgroundColor : null,
-    color: exists(color) ? color.color.hex() : null,
-    alternativeColor: exists(alternativeColor) ? alternativeColor.color.hex() : null
+    color: exists(color) ? toHex(color.color) : null,
+    alternativeColor: exists(alternativeColor) ? toHex(alternativeColor.color) : null
   }
 }

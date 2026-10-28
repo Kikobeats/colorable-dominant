@@ -4,6 +4,7 @@ const should = require('should')
 
 const colorableDominant = require('..')
 const getColorDominance = require('../src/get-color-dominance')
+const colorableParity = require('./fixtures/colorable-parity.json')
 
 describe('colorable-dominant', () => {
   describe('.getColorDominance', () => {
@@ -80,6 +81,16 @@ describe('colorable-dominant', () => {
       backgroundColor: '#3C1020',
       alternativeColor: '#D17872',
       color: '#EF4E2E'
+    })
+  })
+
+  it('throws without colors', () => {
+    should(() => colorableDominant()).throw(TypeError)
+  })
+
+  it('produces the same themes as the colorable-based implementation', () => {
+    colorableParity.forEach(({ colors, options, expected }) => {
+      should(colorableDominant(colors, options)).be.eql(expected)
     })
   })
 })
