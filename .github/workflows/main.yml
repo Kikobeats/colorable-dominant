@@ -9,7 +9,6 @@ on:
       - master
 
 env:
-  pnpm_config_dangerously_allow_all_builds: true
   SKIP_INSTALL_SIMPLE_GIT_HOOKS: true
 
 jobs:
