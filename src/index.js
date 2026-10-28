@@ -35,10 +35,11 @@ const sortPairsByScore = (pairs = []) =>
 const getMostDominantPrimaryColor = (colors, WCAGCompliantColorPairs) => {
   let highestDominanceScore = 0
   let mostDominantColor = ''
+  const canonicalColors = colors.map(color => toHex(parseHex(color)))
 
   for (const dominantColor in WCAGCompliantColorPairs) {
     const pairs = WCAGCompliantColorPairs[dominantColor]
-    const dominance = getColorDominance(dominantColor, colors)
+    const dominance = getColorDominance(dominantColor, canonicalColors)
     const totalPairScore = calculateTotalPairScore(pairs)
     const score = pairs.length ? (pairs.length + totalPairScore) * dominance : 0
     if (score > highestDominanceScore) {
