@@ -1,8 +1,8 @@
 # colorable-dominant
 
-![Last version](https://img.shields.io/github/tag/Kikobeats/colorable-dominant.svg?style=flat-square)
-[![Coverage Status](https://img.shields.io/coveralls/Kikobeats/colorable-dominant.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/colorable-dominant)
-[![NPM Status](https://img.shields.io/npm/dm/colorable-dominant.svg?style=flat-square)](https://www.npmjs.org/package/colorable-dominant)
+[![Last version](https://img.shields.io/github/v/tag/Kikobeats/colorable-dominant?style=flat-square)](https://github.com/Kikobeats/colorable-dominant/releases)
+[![Coverage Status](https://img.shields.io/coverallsCoverage/github/Kikobeats/colorable-dominant?style=flat-square)](https://coveralls.io/github/Kikobeats/colorable-dominant)
+[![NPM Status](https://img.shields.io/npm/dm/colorable-dominant?style=flat-square)](https://www.npmjs.com/package/colorable-dominant)
 
 > Create ARIA-compliant color themes based on a predominant color palette. Similar to [react-image-palette](https://github.com/FormidableLabs/react-image-palette) but out of the box
 
