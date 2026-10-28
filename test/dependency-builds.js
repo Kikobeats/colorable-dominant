@@ -25,7 +25,7 @@ describe('dependency build approval', () => {
     should(workflow).match(/^env:\n {2}SKIP_INSTALL_SIMPLE_GIT_HOOKS: true$/m)
   })
 
-  it('ignores the pnpm lockfile along with the other lockfiles', () => {
+  it('ignores the lockfile pnpm install writes', () => {
     const gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8')
 
     should(gitignore).match(/^pnpm-lock\.yaml$/m)
