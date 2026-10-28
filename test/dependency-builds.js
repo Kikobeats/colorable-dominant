@@ -9,9 +9,10 @@ const root = path.join(__dirname, '..')
 describe('dependency build approval', () => {
   it('approves build scripts only for the packages pnpm would otherwise ignore', () => {
     const workspace = fs.readFileSync(path.join(root, 'pnpm-workspace.yaml'), 'utf8')
-    const expected = ['allowBuilds:', '  simple-git-hooks: true', '  spawn-sync: true', ''].join(
-      '\n'
-    )
+    const expected = `allowBuilds:
+  simple-git-hooks: true
+  spawn-sync: true
+`
 
     should(workspace).equal(expected)
   })
