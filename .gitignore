@@ -32,3 +32,6 @@ coverage
 ############################
 # Other
 ############################
+benchmark-output.json
+head-output.json
+cache/
