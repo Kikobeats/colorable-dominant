@@ -1,8 +1,8 @@
 # colorable-dominant
 
-![Last version](https://img.shields.io/github/tag/Kikobeats/colorable-dominant.svg?style=flat-square)
-[![Coverage Status](https://img.shields.io/coveralls/Kikobeats/colorable-dominant.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/colorable-dominant)
-[![NPM Status](https://img.shields.io/npm/dm/colorable-dominant.svg?style=flat-square)](https://www.npmjs.org/package/colorable-dominant)
+[![Last version](https://img.shields.io/github/v/tag/Kikobeats/colorable-dominant?style=flat-square)](https://github.com/Kikobeats/colorable-dominant/releases)
+[![Coverage Status](https://img.shields.io/coverallsCoverage/github/Kikobeats/colorable-dominant?style=flat-square)](https://coveralls.io/github/Kikobeats/colorable-dominant)
+[![NPM Status](https://img.shields.io/npm/dm/colorable-dominant?style=flat-square)](https://www.npmjs.com/package/colorable-dominant)
 
 > Create ARIA-compliant color themes based on a predominant color palette. Similar to [react-image-palette](https://github.com/FormidableLabs/react-image-palette) but out of the box
 
@@ -43,7 +43,7 @@ console.log({ palette, ...colorableDominant(palette) })
 *Required*<br>
 Type: `array`
 
-A collection of a predominant colors, sorted from most to less predominant.
+Predominant colors, sorted from most predominant to least. Each entry is a 3-digit or 6-digit hex string (`#fff` or `#941c1c`).
 
 #### options
 
@@ -65,7 +65,7 @@ Default: `1.0`
 
 The minimum [WCAG contrast ratio](https://www.w3.org/TR/WCAG20/#visual-audio-contrast) to considered a combination of colors.
 
-The value means that combinations below this value will be discarded.
+Combinations whose contrast is not above this value are discarded.
 
 ## Related
 
