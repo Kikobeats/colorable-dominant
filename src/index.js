@@ -68,7 +68,10 @@ module.exports = (colors, opts) => {
   // Object.assign copies an explicit undefined over the default.
   if (opts.threshold === undefined) opts.threshold = THRESHOLD_CONTRAST_RATIO
   const { minContrast, threshold } = opts
-  const palette = colors.filter((color, index) => colors.indexOf(color) === index).map(parseHex)
+  const canonicalColors = colors.map(color => toHex(parseHex(color)))
+  const palette = canonicalColors
+    .filter((color, index) => canonicalColors.indexOf(color) === index)
+    .map(parseHex)
   const WCAGCompliantColorPairs = {}
 
   getColorCombinations(palette, threshold).forEach(({ dominantColor, combinations }) => {
@@ -121,7 +124,7 @@ module.exports = (colors, opts) => {
     })
   })
 
-  const backgroundColor = getMostDominantPrimaryColor(colors, WCAGCompliantColorPairs)
+  const backgroundColor = getMostDominantPrimaryColor(canonicalColors, WCAGCompliantColorPairs)
 
   // prettier-ignore
   let [color, alternativeColor, accentColor] = WCAGCompliantColorPairs[backgroundColor]
