@@ -65,7 +65,9 @@ const getColorCombinations = (palette, threshold) =>
 
 module.exports = (colors, opts) => {
   opts = Object.assign({}, DEFAULT, opts)
-  const { minContrast, threshold = 0 } = opts
+  // Object.assign copies an explicit undefined over the default.
+  if (opts.threshold === undefined) opts.threshold = THRESHOLD_CONTRAST_RATIO
+  const { minContrast, threshold } = opts
   const palette = colors.filter((color, index) => colors.indexOf(color) === index).map(parseHex)
   const WCAGCompliantColorPairs = {}
 

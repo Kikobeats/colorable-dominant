@@ -88,6 +88,27 @@ describe('colorable-dominant', () => {
     should(() => colorableDominant()).throw(TypeError)
   })
 
+  it('drops duplicate colors before pairing', () => {
+    should(colorableDominant(['#FF0000', '#FF0000', '#0000FF'], { threshold: 0 })).be.eql({
+      backgroundColor: '#FF0000',
+      color: '#00005C',
+      alternativeColor: '#00005C'
+    })
+  })
+
+  it('drops a pair whose contrast equals the threshold', () => {
+    should(colorableDominant(['#000000', '#ffffff'], { threshold: 21, minContrast: 21 })).be.eql({
+      backgroundColor: null,
+      color: null,
+      alternativeColor: null
+    })
+  })
+
+  it('keeps the default threshold when the option is undefined', () => {
+    const colors = ['#000000', '#ffffff']
+    should(colorableDominant(colors, { threshold: undefined })).be.eql(colorableDominant(colors))
+  })
+
   it('produces the same themes as the colorable-based implementation', () => {
     colorableParity.forEach(({ colors, options, expected }) => {
       should(colorableDominant(colors, options)).be.eql(expected)

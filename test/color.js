@@ -6,6 +6,7 @@ const {
   parseHex,
   toHex,
   contrastRatio,
+  isDark,
   rgbToHsl,
   hslToRgb,
   shiftLightness
@@ -46,6 +47,29 @@ describe('color', () => {
       should(shift('#808080', 0.5)).be.equal('#C0C0C0')
       should(shift('#808080', -0.5)).be.equal('#404040')
     })
+
+    it('wraps hue and clamps saturation before the step', () => {
+      should(shiftLightness([360, 150, 40], 0)).be.eql([0, 100, 40])
+      should(shiftLightness([-20, -10, 40], 0)).be.eql([340, 0, 40])
+    })
+
+    it('clamps lightness before applying the ratio', () => {
+      should(shiftLightness([10, 20, 150], 0.5)).be.eql([10, 20, 150])
+      should(shiftLightness([10, 20, -25], -0.5)).be.eql([10, 20, 0])
+    })
+  })
+
+  describe('.rgbToHsl', () => {
+    it('wraps a negative hue into the 0..360 range', () => {
+      should(rgbToHsl([255, 0, 1])[0]).be.equal(359.7647058823529)
+    })
+  })
+
+  describe('.isDark', () => {
+    it('treats YIQ 128 as light', () => {
+      should(isDark([12, 175, 4])).be.false()
+      should(isDark([12, 174, 4])).be.true()
+    })
   })
 
   describe('.contrastRatio', () => {
@@ -61,6 +85,17 @@ describe('color', () => {
     it('matches the WCAG 2.2 relative luminance definition', () => {
       should(contrastRatio([119, 119, 119], [255, 255, 255]).toFixed(2)).be.equal('4.48')
       should(contrastRatio([118, 118, 118], [255, 255, 255]).toFixed(2)).be.equal('4.54')
+    })
+
+    it('linearizes at the WCAG 2.2 cutoff of 0.04045', () => {
+      const againstBlack = channel => {
+        const value = channel / 255
+        const linear = 0.2126 * (value / 12.92)
+        return (linear + 0.05) / 0.05
+      }
+      // Exactly 0.04045 takes the linear branch. Just above 0.03928 still does too.
+      should(contrastRatio([0.04045 * 255, 0, 0], [0, 0, 0])).be.equal(againstBlack(0.04045 * 255))
+      should(contrastRatio([0.04 * 255, 0, 0], [0, 0, 0])).be.equal(againstBlack(0.04 * 255))
     })
   })
 })

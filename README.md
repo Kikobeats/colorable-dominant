@@ -43,7 +43,7 @@ console.log({ palette, ...colorableDominant(palette) })
 *Required*<br>
 Type: `array`
 
-A collection of a predominant colors, sorted from most to less predominant.
+Predominant colors, sorted from most predominant to least. Each entry is a 3-digit or 6-digit hex string (`#fff` or `#941c1c`).
 
 #### options
 
@@ -65,7 +65,7 @@ Default: `1.0`
 
 The minimum [WCAG contrast ratio](https://www.w3.org/TR/WCAG20/#visual-audio-contrast) to considered a combination of colors.
 
-The value means that combinations below this value will be discarded.
+Combinations whose contrast is not above this value are discarded.
 
 ## Related
 

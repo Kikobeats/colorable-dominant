@@ -47,7 +47,7 @@ const rgbToHsl = rgb => {
   else if (g === max) h = 2 + (b - r) / delta
   else h = 4 + (r - g) / delta
 
-  h = Math.min(h * 60, 360)
+  h *= 60
   if (h < 0) h += 360
 
   const l = (min + max) / 2
