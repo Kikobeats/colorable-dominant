@@ -6,19 +6,26 @@ const should = require('should')
 
 const root = path.join(__dirname, '..')
 
+function normalizeNewlines (value) {
+  return value.replace(/\r\n/g, '\n')
+}
+
+function readText (name) {
+  return normalizeNewlines(fs.readFileSync(path.join(root, name), 'utf8'))
+}
+
 describe('dependency build approval', () => {
-  it('approves build scripts only for the packages pnpm would otherwise ignore', () => {
-    const workspace = fs.readFileSync(path.join(root, 'pnpm-workspace.yaml'), 'utf8')
-    const expected = `allowBuilds:
+  const expected = `allowBuilds:
   simple-git-hooks: true
   spawn-sync: true
 `
 
-    should(workspace).equal(expected)
+  it('approves build scripts only for the packages pnpm would otherwise ignore', () => {
+    should(readText('pnpm-workspace.yaml')).equal(expected)
   })
 
   it('installs with pnpm and skips git hooks without allowing every build', () => {
-    const workflow = fs.readFileSync(path.join(root, '.github/workflows/main.yml'), 'utf8')
+    const workflow = readText('.github/workflows/main.yml')
 
     should(workflow).not.match(/dangerously_allow_all_builds/)
     should(workflow).not.match(/run_install/)
@@ -27,8 +34,36 @@ describe('dependency build approval', () => {
   })
 
   it('ignores the lockfile pnpm install writes', () => {
-    const gitignore = fs.readFileSync(path.join(root, '.gitignore'), 'utf8')
+    should(readText('.gitignore')).match(/^pnpm-lock\.yaml$/m)
+  })
 
-    should(gitignore).match(/^pnpm-lock\.yaml$/m)
+  it('accepts a CRLF checkout of the install policy', () => {
+    const files = [
+      'pnpm-workspace.yaml',
+      '.github/workflows/main.yml',
+      '.gitignore'
+    ]
+    const original = {}
+
+    for (const name of files) {
+      original[name] = fs.readFileSync(path.join(root, name))
+    }
+
+    try {
+      for (const name of files) {
+        const lf = original[name].toString('utf8').replace(/\r\n/g, '\n')
+        fs.writeFileSync(path.join(root, name), lf.replace(/\n/g, '\r\n'))
+      }
+
+      should(readText('pnpm-workspace.yaml')).equal(expected)
+      const workflow = readText('.github/workflows/main.yml')
+      should(workflow).match(/^ {6}- name: Install\n {8}run: pnpm install$/m)
+      should(workflow).match(/^env:\n {2}SKIP_INSTALL_SIMPLE_GIT_HOOKS: true$/m)
+      should(readText('.gitignore')).match(/^pnpm-lock\.yaml$/m)
+    } finally {
+      for (const name of files) {
+        fs.writeFileSync(path.join(root, name), original[name])
+      }
+    }
   })
 })
